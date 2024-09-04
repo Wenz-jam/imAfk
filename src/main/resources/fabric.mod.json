@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "imafk",
+  "version": "${version}",
+  "name": "imAfk",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "ISC",
+  "icon": "assets/imafk/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "org.wenzjam.imafk.Imafk"
+    ]
+  },
+  "mixins": [
+    "imafk.mixins.json",
+    {
+      "config": "imafk.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
